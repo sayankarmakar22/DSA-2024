@@ -1,0 +1,30 @@
+// Online C++ compiler to run C++ program online
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "enter the size you want as array size : " ;
+    cin >> n;
+    vector<int> arr[n];
+    
+    for(int i=0;i<n;i++){
+        for(int j=0;j<INT_MAX;j++){
+            cout << "enter the values for [" << i <<"][" << j <<"]"<<endl;
+            cout << "to quit the index press -1" << endl;
+            int values;
+            cin>>values;
+            if(values == -1) break;
+            arr[i].push_back(values);
+        }
+    }
+    for(int i=0;i<n;i++){
+        for(int j=0;j<arr[i].size();j++){
+            cout << "values of [" << i <<"][" << j <<"] : ";
+            cout << arr[i][j] << endl;
+
+        }
+    }
+
+    return 0;
+}
